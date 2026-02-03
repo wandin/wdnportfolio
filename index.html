@@ -251,6 +251,90 @@
 
 				<div class="sim-grid">
 
+					<!-- ================= 2D Dynamics Force Integration ================= -->
+					<section class="sim-card">
+					<div class="sim-media">
+						<iframe
+						src="https://drive.google.com/file/d/1ehdt89NFx6wK3f7UaH9JKnzrN6qz11wE/preview"
+						allowfullscreen>
+						</iframe>
+					</div>
+
+					<div class="sim-content">
+						<h3>2D Dynamics Force Integration</h3>
+
+						<p class="sim-desc">
+						A deterministic 2D dynamics simulator written in C++ using Raylib,
+						focused on modeling force-based motion, mass effects, and numerical integration stability.
+						This project extends a previous kinematics-only simulator into a Newtonian dynamics model,
+						making acceleration an emergent property derived from forces rather than a direct input.
+						It also provides real-time visual feedback to compare different integration methods under stress.
+						</p>
+
+						<ul class="sim-list">
+						Project Goals:
+						<li>Model force → acceleration → velocity → position correctly</li>
+						<li>Compare numerical integration methods (Euler vs RK2)</li>
+						<li>Visualize physical quantities (force, acceleration, energy)</li>
+						<li>Expose numerical instability using controlled timestep stress</li>
+						<li>Keep a clean, modular simulation architecture</li>
+						</ul>
+
+						<ul class="sim-list">
+						The simulator is intentionally split into clear, independent modules:
+						<li>State → Physical state (data only)</li>
+						<li>Dynamics → Force resolution (physics laws)</li>
+						<li>Integrator → Numerical integration</li>
+						<li>Renderer → Visualization & HUD</li>
+						<li>Main Loop → Orchestration & input</li>
+						</ul>
+
+						<div class="sim-links">
+						<a href="https://github.com/wandin/2d-dynamics-force-integration" target="_blank" class="btn btn--ghost">
+							GitHub
+						</a>
+						</div>
+					</div>
+					</section>
+
+					<!-- ================= 2D Kinematics & Time Integration ================= -->
+					<section class="sim-card">
+					<div class="sim-media">
+						<iframe
+						src="https://drive.google.com/file/d/1oVWf7eWQabbWRKOZ9QzvqmbYq9SEmwId/preview"
+						allowfullscreen>
+						</iframe>
+					</div>
+
+					<div class="sim-content">
+						<h3>2D Kinematics & Time Integration</h3>
+
+						<p class="sim-desc">
+						A deterministic 2D kinematic simulator written in C++ using Raylib,
+						designed to explore numerical integration methods commonly used in robotics,
+						autonomous systems, and aerospace simulation.
+						The project allows runtime comparison between different integrators and includes a stress mode to visually highlight numerical stability differences.
+						</p>
+
+						<ul class="sim-list">
+						<li>Fixed-step simulation loop (deterministic)</li>
+						<li>Semi-implicit Euler integrator</li>
+						<li>Second-order Runge–Kutta (RK2 / Midpoint) integrator</li>
+						<li>Runtime integrator switching</li>
+						<li>Stress mode with increased timestep</li>
+						<li>Acceleration-based inertial motion</li>
+						<li>Trajectory trail visualization</li>
+						<li>Clean separation between simulation and rendering</li>
+						</ul>
+
+						<div class="sim-links">
+						<a href="https://github.com/wandin/2d-kinematics-integrator" target="_blank" class="btn btn--ghost">
+							GitHub
+						</a>
+						</div>
+					</div>
+					</section>
+
 					<!-- ================= BOIDS ================= -->
 					<section class="sim-card">
 
@@ -368,6 +452,7 @@
 					<footer id="footer">
 						<p class="copyright"> Wanderson Lopes - Portfolio. </br>&copy; <a href="https://html5up.net">HTML5 UP</a>.</p>
 					</footer>
+
 			</div>
 
 		<!-- BG -->
@@ -385,4 +470,3 @@
 
 	</body>
 </html>
-
