@@ -31,7 +31,7 @@
 
 				<p class="hero__subtitle">
 					Systems & Simulation Engineer <br>
-					C++ · Unreal Engine · Real-Time Systems</br>
+					C++ · Real-Time Simulation · Engine Technology</br>
 				</p>
 
 				<p class="hero__tagline">
@@ -137,22 +137,44 @@
 
 				<!-- Selector -->
 				<div class="work-grid">
-					<button class="work-card active" data-work="avalon">AVALON</button>
+					<button class="work-card active" data-work="tinyleviathan">Tiny Leviathan</button>
+					<button class="work-card" data-work="avalon">AVALON</button>
 					<button class="work-card" data-work="gamecan">Gamecan</button>
 					<button class="work-card" data-work="offworld">Offworld Industries</button>
 				</div>
 
 				<div class="work-detail">
 
+					<!-- ================= Tiny Leviathan ================= -->
+						<section class="work-item active" id="work-tinyleviathan">
+					<div class="work-layout">
+
+						<div class="work-media">
+							<a href="https://store.steampowered.com/app/860020/EXFIL/" target="_blank">
+								<img src="images/MyImages/exfil.jpg" alt="Exfil">
+							</a>
+						</div>
+
+						<div class="work-content">
+						<h3>Exfil — Senior Systems Engineer</h3>
+
+						<ul class="work-list">
+						Implementing systems such as:
+						<li>Emotes System</li>
+						<li>Game Master System</li>
+						</ul>
+						</div>
+
+					</div>
+					</section>
+
 					<!-- ================= AVALON ================= -->
-					<section class="work-item active" id="work-avalon">
+					<section class="work-item" id="work-avalon">
 
 					<div class="work-layout">
 
 						<div class="work-media">
-						<iframe
-							src="https://www.youtube.com/embed/QQUPWsEeLag"
-							allowfullscreen>
+						<iframe	src="https://www.youtube.com/embed/QQUPWsEeLag"	allowfullscreen>
 						</iframe>
 						</div>
 
@@ -177,7 +199,9 @@
 					<div class="work-layout">
 
 						<div class="work-media">
-						<img src="images/MyImages/contenders arena.jpg" alt="Contenders Arena">
+							<a href="https://store.steampowered.com/app/2445510/Contenders_Arena/" target="_blank">
+								<img src="images/MyImages/contenders arena.jpg" alt="Contenders Arena">
+							</a>
 						</div>
 
 						<div class="work-content">
@@ -199,7 +223,9 @@
 					<div class="work-layout">
 
 						<div class="work-media">
-						<img src="images/MyImages/squad.jpg" alt="Contenders Arena">
+							<a href="https://store.steampowered.com/app/393380/Squad/" target="_blank">
+								<img src="images/MyImages/squad.jpg" alt="SQUAD">
+							</a>
 						</div>
 
 						<div class="work-content">
@@ -215,8 +241,11 @@
 
 
 						<div class="work-media">
-						<img src="images/MyImages/btw.jpg" alt="Beyond The Wire">
+						<a href="https://store.steampowered.com/app/1058650/Beyond_The_Wire/" target="_blank">
+							<img src="images/MyImages/btw.jpg" alt="Beyond The Wire">
+						</a>
 						</div>
+
 						<div class="work-content">
 						<h3>Beyond The Wire — QA & Gameplay Support</h3>
 
@@ -250,7 +279,47 @@
 
 				<div class="sim-grid">
 
-						<!-- ================= AI-Assisted Narrative Tooling — Unreal Engine ================= -->
+					<!-- ================= Autonomous Sensor & Intercept Simulation ================= -->
+					<section class="sim-card">
+
+					<div class="sim-media">
+						<iframe
+						src="https://drive.google.com/file/d/1aEkF2K7UxiCptDj8tEQKkxlmIpXYVj5f/preview"
+						allowfullscreen>
+						</iframe>
+					</div>
+
+					<div class="sim-content">
+						<h3>Autonomous Sensor & Intercept Simulation</h3>
+
+						<p class="sim-desc">
+						A real-time sensor-driven perception and tracking system inspired by radar and LIDAR pipelines
+						used in robotics, aerospace, and defense systems.
+						The project implements a full pipeline from spatial sensing to predictive targeting,
+						including clustering, multi-object tracking, state estimation, and analytical intercept computation.
+						</p>
+
+						<ul class="sim-list">
+						<li>Real-time LIDAR-style scanning using raycasts (point cloud generation)</li>
+						<li>Voxel grid filtering for noise reduction and data decimation</li>
+						<li>Distance-based clustering with ground filtering</li>
+						<li>Multi-object tracking with motion-aware data association</li>
+						<li>Kalman Filter for state estimation (position + velocity)</li>
+						<li>Future trajectory prediction and visualization</li>
+						<li>Analytical intercept solver (projectile vs moving target)</li>
+						<li>Full debug visualization: clusters, velocity, prediction, intercept</li>
+						<li>Automated unit tests validating core algorithms under deterministic and edge-case scenarios</li>
+						</ul>
+
+						<div class="sim-links">
+						<a href="https://github.com/wandin/Autonomous-Sensor-Intercept-Simulator" target="_blank" class="btn btn--ghost">
+							GitHub
+						</a>
+						</div>
+					</div>
+					</section>
+
+					<!-- ================= AI-Assisted Narrative Tooling — Unreal Engine ================= -->
 					<section class="sim-card">
 					<div class="sim-media">
 						<iframe
