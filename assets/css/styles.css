@@ -557,6 +557,224 @@ iframe {
   }
 }
 
+.game-viewport {
+  position: relative;
+  margin: 28px auto 20px;
+  width: min(330px, 100%);
+  aspect-ratio: 16 / 10;
+  border: 1px solid rgba(57,217,255,.28);
+  border-radius: 22px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 48%, rgba(87,255,179,.12), transparent 18%),
+    linear-gradient(180deg, rgba(57,217,255,.12), rgba(168,85,247,.08)),
+    #050814;
+  box-shadow:
+    inset 0 0 48px rgba(57,217,255,.08),
+    0 0 54px rgba(57,217,255,.12);
+}
+
+.viewport-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px);
+  background-size: 28px 28px;
+  mask-image: radial-gradient(circle at center, black 0%, transparent 78%);
+}
+
+.game-viewport::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, transparent 0 48%, rgba(57,217,255,.22) 49% 50%, transparent 51%),
+    linear-gradient(0deg, transparent 0 48%, rgba(57,217,255,.18) 49% 50%, transparent 51%);
+  opacity: .65;
+}
+
+.viewport-label {
+  position: absolute;
+  z-index: 2;
+  display: grid;
+  gap: 2px;
+  padding: 8px 10px;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 12px;
+  background: rgba(5, 8, 20, .58);
+  backdrop-filter: blur(12px);
+  font-family: "JetBrains Mono", monospace;
+}
+
+.viewport-label strong {
+  color: var(--green);
+  font-size: 10px;
+  letter-spacing: .08em;
+}
+
+.viewport-label span {
+  color: var(--soft);
+  font-size: 10px;
+}
+
+.top-left {
+  left: 12px;
+  top: 12px;
+}
+
+.top-right {
+  right: 12px;
+  top: 12px;
+  text-align: right;
+}
+
+.crosshair {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 3;
+  width: 58px;
+  height: 58px;
+  transform: translate(-50%, -50%);
+  border: 1px solid rgba(57,217,255,.34);
+  border-radius: 999px;
+  box-shadow: 0 0 28px rgba(57,217,255,.2);
+}
+
+.crosshair::before,
+.crosshair::after {
+  content: "";
+  position: absolute;
+  background: rgba(87,255,179,.75);
+}
+
+.crosshair::before {
+  left: 50%;
+  top: -12px;
+  width: 1px;
+  height: 82px;
+}
+
+.crosshair::after {
+  left: -12px;
+  top: 50%;
+  width: 82px;
+  height: 1px;
+}
+
+.crosshair span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: var(--green);
+  box-shadow: 0 0 18px var(--green);
+  transform: translate(-50%, -50%);
+}
+
+.player-frame {
+  position: absolute;
+  left: 50%;
+  bottom: 58px;
+  z-index: 2;
+  width: 84px;
+  height: 118px;
+  transform: translateX(-50%);
+}
+
+.player-silhouette {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 42px;
+  height: 86px;
+  transform: translateX(-50%);
+  border-radius: 22px 22px 10px 10px;
+  background:
+    radial-gradient(circle at 50% 13%, rgba(255,255,255,.9) 0 10px, transparent 11px),
+    linear-gradient(180deg, rgba(255,255,255,.38), rgba(57,217,255,.16));
+  opacity: .82;
+}
+
+.debug-box {
+  position: absolute;
+  border: 1px solid rgba(87,255,179,.62);
+  border-radius: 5px;
+  box-shadow: 0 0 16px rgba(87,255,179,.16);
+}
+
+.debug-box-a {
+  left: 18px;
+  top: 12px;
+  width: 48px;
+  height: 42px;
+}
+
+.debug-box-b {
+  left: 12px;
+  top: 52px;
+  width: 60px;
+  height: 58px;
+}
+
+.ability-bar {
+  position: absolute;
+  left: 50%;
+  bottom: 14px;
+  z-index: 4;
+  display: flex;
+  gap: 7px;
+  transform: translateX(-50%);
+}
+
+.ability-bar span {
+  display: grid;
+  place-items: center;
+  width: 31px;
+  height: 31px;
+  border: 1px solid rgba(255,255,255,.16);
+  border-radius: 9px;
+  color: var(--text);
+  background: rgba(255,255,255,.075);
+  font: 800 11px "JetBrains Mono", monospace;
+  box-shadow: inset 0 0 18px rgba(57,217,255,.06);
+}
+
+.hud-bars {
+  position: absolute;
+  left: 14px;
+  bottom: 18px;
+  z-index: 4;
+  display: grid;
+  gap: 7px;
+  width: 86px;
+}
+
+.hud-bar {
+  height: 7px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.12);
+  overflow: hidden;
+}
+
+.hud-bar i {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--green), var(--cyan));
+}
+
+.hud-bar.secondary i {
+  background: linear-gradient(90deg, var(--purple), var(--cyan));
+}
+
+.game-lines p {
+  position: relative;
+}
+
 
 .code-lines {
   display: grid;
