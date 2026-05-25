@@ -1589,6 +1589,19 @@ footer {
   .nav-cta {
     display: none;
   }
+
+    .projects-radar-card {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-radar {
+    width: min(210px, 100%);
+    margin: 0 auto;
+  }
+
+  .projects-radar-info {
+    text-align: center;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
